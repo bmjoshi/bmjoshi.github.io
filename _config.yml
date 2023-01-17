@@ -2,4 +2,65 @@
 markdown: kramdown
 remote_theme: pages-themes/architect@v0.2.0
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jemoji
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-seo-tag
+highlighter: blue
+
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+# profile
+author:
+  - name: Bhargav Joshi
+  - job-title: Postdoctoral Fellow, University of Minnesota
+  - email: joshib@umn.edu
+
+# Social media
+github_username: bmjoshi
+linkedin_username: bjoshi
+orcid_username: 
+github_repo: https://github.com/bmjoshi/bmjoshi.github.io
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://bmjoshi.github.io" # the base hostname & protocol for your site
+timezone: America/Chicago
+encoding: utf-8
+
+exclude:
+  - README.md
+  - jekyll_serve.sh
+  - jekyll_compose.py
+
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page:num"
+
+# Blog permalink
+permalink: /blog/:year/:month/:day/:title/
+
+# Blog separator
+excerpt_separator: <!--more-->
+
+# Collections
+collections:
+  permaposts:
+    output: true
+
+redcarpet:
+  extensions: ["no_intra_emphasis", "tables", "fenced_code_blocks", "autolink", "strikethrough", "with_toc_data"]
+
+sass:
+  sass_dir: assets/stylesheets/
+
+google_analytics: G-3C017Y56GF
